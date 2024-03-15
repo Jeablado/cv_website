@@ -1,0 +1,196 @@
+/* general style */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+    
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left a {
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px
+}
+
+.header-left a:hover{
+    text-decoration: none;
+}
+
+.header-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+	
+}
+
+.header-right ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+p {
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.footer-nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* home style */
+
+#swiss_made_logo {
+    position: relative; /* Pour permettre le positionnement relatif des éléments enfants */
+    width: 60px; /* Largeur du conteneur d'image */
+    height: 60px; /* Hauteur du conteneur d'image */
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+#click{
+    font-style: italic;
+}
+
+#photo_cv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100px; /* Ajoutez une largeur maximale pour contrôler la taille de l'image */
+    height: auto; /* Permet à la hauteur de s'ajuster automatiquement en fonction de la largeur */
+    margin-top: 20px; /* Ajoutez un espacement entre l'image et le contenu existant */
+}
+
+#fleches {
+    max-width: 30px; /* Ajoutez une largeur maximale pour contrôler la taille de l'image */
+    height: auto; /* Permet à la hauteur de s'ajuster automatiquement en fonction de la largeur */
+}
+
+
+.footer-administration:hover{
+    background-color: #FF0000;
+}
+
+.footer-it:hover{
+    background-color: #002CE0;
+}
+
+.footer-photo:hover{
+    background-color: #B700C5;
+}
+
+/* ils l'ont dit style */
+
+.text-ont-dit{
+    position: absolute;
+    font-size: 10px;
+    color: #333;
+    max-width: 100px;
+    padding: 10px;
+    background-color: #F0F0F0;
+    color: #000000;
+    border-radius: 5px;
+}
+
+#text1{  
+    top: 100px;
+    left: 10%; 
+}
+
+#text2{
+    top: 200px;
+    left: 80%;
+}
+
+#text3{
+    top: 250px;
+    left: 40%;
+}
+
+.ont-dit-citation{
+    font-style: italic;
+    margin-top:0
+}
+
+.ont-dit-signature{
+    font-weight: bold;
+    margin-bottom:0
+}
+
+.footer-contact:hover{
+	    background-color: #FF0000;
+}
+
+.footer-savoir-plus:hover{
+	    background-color: #002CE0;
+}
