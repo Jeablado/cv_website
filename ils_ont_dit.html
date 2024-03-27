@@ -9,41 +9,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <script src="script.js"></script>
 </head>
 <body>
 <header>
-    <div class="header-left">
-        <a href="home.html">Jérémie Lobsiger</a>
+    <div>
+        <a href="index.html">Jérémie Lobsiger</a>
     </div>
-    <nav class="header-right">
+    <nav>
         <ul>
             <li><a href="ils_ont_dit.html">Ils l'ont dit</a></li>
-            <li><a href="#">Compétences</a></li>
-            <li><a href="#">Formations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="parcours_pro.html">Parcours professionnel</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
-
-<div class="text-ont-dit" id="text1">
-    <p class="ont-dit-citation">"Monsieur Lobsiger a toujours démontré une grande perseverance et créativité."</p>
-    <p class="ont-dit-signature">M. Gog,<br>Consulat suisse Marseille</p>
-</div>
-<div class="text-ont-dit" id="text2">
-    <p class="ont-dit-citation">"J'ai été émerveillé par les photo de mariage prises par Jérémie"</p>
-    <p class="ont-dit-signature">P. Tsioba</p>
-</div>
-<div class="text-ont-dit" id="text3">
-    <p class="ont-dit-citation">"Un souvenir impérissable autant pour les collègues que pour les clients"</p>
-    <p class="ont-dit-signature">T. Beispiel,<br>Hasbro</p>
-</div>
-
+<main>
+    <div class="main-title blinking-animation">
+        <p id="click-ont-dit">Cliquez pour en savoir plus</p>   
+        <img src="images/fleche.png" alt="fleche" id="fleche-ont-dit">
+    </div>
+    <section class="section-row">
+        <div class="div-ont-dit link-pointer" id="graf">
+            <p class="ont-dit-citation">"Monsieur Lobsiger a des connaissances pointues et axées sur la pratique qui ont été
+                très utiles à notre Consulat général. Grace à son expertise, il a été largement à la
+                hauteur du travail considérable qui lui a été confié et a obtenu d'excellents résultats"</p>
+            <p class="ont-dit-signature">J. Graf,<br>Consulat suisse Marseille</p>
+        </div>
+        <div class="div-ont-dit link-pointer" id="methe">
+            <p class="ont-dit-citation">"J'ai été émerveillée par l'intensité des photos prises par Jérémie à mon mariage et par son écoute attentive de mes envies"</p>
+            <p class="ont-dit-signature">P. Cornot</p>
+        </div>
+        <div class="div-ont-dit link-pointer" id="roh">
+            <p class="ont-dit-citation">"Nous avons toujours pu compter sur un travail extrêmement fiable, précis, constructif et de qualité de
+                la part de Monsieur Lobsiger"</p>
+            <p class="ont-dit-signature">A. Roh,<br>Consulat suisse Marseille</p>
+        </div>
+        <div class="div-ont-dit link-pointer" id="gonzalez">
+            <p class="ont-dit-citation">"Même dans les périodes de stress, Monsieur Lobsiger a gardé une bonne vision de son travail et m'a secondée de façon exemplaire"</p>
+            <p class="ont-dit-signature">M. Gonzalez,<br>Hasbro</p>
+        </div>
+    </section>
+</main>
 <footer>
-    <nav class="footer-nav">
+    <nav>
         <ul>
             <li><a class="footer-contact" href="contact.html">Je suis convaincu!</a></li>
-            <li><a class="footer-savoir-plus" href="home.html">En savoir plus</a></li>
+            <li><a class="footer-savoir-plus" href="index.html">En savoir plus</a></li>
         </ul>
     </nav>
 </footer>

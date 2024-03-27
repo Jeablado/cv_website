@@ -1,196 +1,436 @@
-/* general style */
-
+/*global*/
 * {
     font-family: 'Roboto', sans-serif;
 }
-    
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    text-align: center;
-    min-height: 100vh;
-    position: relative;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-left a {
-    text-align: left;
-    font-weight: bold;
-    font-size: 24px
-}
-
-.header-left a:hover{
-    text-decoration: none;
-}
-
-.header-right ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-	
-}
-
-.header-right ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
 h1 {
     font-weight: bold;
-    margin: 20px 0;
+    margin: 2vh 0;
+    font-size: 2em;
 }
-
-
+h2{
+    padding: 3vh;
+    margin: 0;
+}
+.h2-without-padding{
+    padding: 0;
+    padding-bottom: 1vh
+}
+h3{
+    padding: 0;
+    margin: 0;
+}
 p {
     line-height: 1.6;
     font-weight: normal;
+    margin:1vh 0;
 }
-
 a {
     color: #fff;
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
 }
+ul{
+    list-style-type: none;
+}
+header {
+    display: flex;
+    background-color: #333;
+    padding: 3vh 2vw;
+    justify-content: space-between;
+    align-items: center;
+}
+header div{
+    text-align: left;
+    font-size: 2em;
+    width: 100%;
+    font-weight: bold
+}
+header nav{
+    width: 100%;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+header nav ul li{
+    margin: 0 2%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: auto;
+}
+.main-title{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.section-column{
+    flex-direction: column;
+    margin: auto;
+}
+.half-page-column{
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0 1vw;
+}
 
+.section-row{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 footer {
     background-color: #333;
     color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: absolute;
-    bottom: 0;
+    padding: 5vh 0;
     width: 100%;
 }
-
-.footer-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+footer nav ul{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+footer nav ul li{
+    margin: 0 0.5vw;
+}
+footer nav ul li a{
+    padding: 2vh 2vw;
+    white-space: nowrap;
+    color: black;
+    background-color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+footer nav ul li a:hover{
+    color:#fff
+}
+.link-pointer{
+    cursor: pointer;
+}
+.no-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.flex-start-items{
+    align-items: flex-start;
 }
 
-.footer-nav ul li {
-    display: inline;
-    margin-right: 20px;
+
+/*animation with @keyframes*/
+@keyframes blink{
+    0% { opacity: 1; }
+    33% { opacity: 0; }
+    66% {opacity: 1;}
+    100% { opacity: 1; }
+}
+@keyframes down{
+    0% { transform: translateY(0); }
+    30% { transform: translateY(0); }
+    45% { transform: translateY(2vh); }
+    60% { transform: translateY(0); }
+    75% { transform: translateY(2vh); }
+    100% { transform: translateY(0); }
+}
+@keyframes zoom {
+    0% { transform: scale(0.7); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.7); }
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    60% { transform: rotate(0deg); }
+    65% { transform: rotate(-5deg); }
+    70% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    80% { transform: rotate(5deg); }
+    85% { transform: rotate(-5deg); }
+    90% { transform: rotate(5deg); }
+    95% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+.blinking-animation {
+    animation: blink 2s infinite;
+}
+.zoom-animation{
+    animation: zoom 6s ease-in-out infinite;
+}
+.down-animation{
+    animation: down 1.7s ease-in-out infinite;
+}
+.shaking-animation{
+    animation: shake 4s ease-in-out infinite;
 }
 
-.footer-nav ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 5px;
+
+
+/* index.html */
+#upper-section-index{
+    display: flex;
+    justify-content: space-between;
 }
-
-.footer-nav ul li a:hover {
-    color: #ffffff;
+#upper-section-index img{
+    max-width: 8vw;
 }
-
-/* home style */
-
-#swiss_made_logo {
-    position: relative; /* Pour permettre le positionnement relatif des éléments enfants */
-    width: 60px; /* Largeur du conteneur d'image */
-    height: 60px; /* Hauteur du conteneur d'image */
+#section-index{
+    flex-wrap: wrap-reverse;
 }
+.div-index{
+    max-width: 33vw;
+    width: 33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1vh;
 
-.container {
-    position: relative;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    padding-top: 40px;
-    padding-bottom: 60px;
 }
-
-#click{
+.div-index a{
+    color: black;
+    text-decoration: none;
+}
+#left-div-index img{
+    align-self: center;
+    max-width: 6vw;
+}
+#presentation-div{
+    font-size: 1.3em;
+}
+.admin-text{
+    background-color: #FF0000;
+    color:#fff;
+}
+.it-text{
+    background-color: #002CE0;
+    color:#fff;
+}
+.photo-text{
+    background-color: #B700C5;
+    color:#fff;
+}
+#photo-cv{
+    max-width: 50%;
+    border-radius: 50%;
+}
+#click-index{
     font-style: italic;
+    padding-top: 2vh;
 }
-
-#photo_cv {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 100px; /* Ajoutez une largeur maximale pour contrôler la taille de l'image */
-    height: auto; /* Permet à la hauteur de s'ajuster automatiquement en fonction de la largeur */
-    margin-top: 20px; /* Ajoutez un espacement entre l'image et le contenu existant */
+#fleches-index{
+    max-width: 10%;
 }
-
-#fleches {
-    max-width: 30px; /* Ajoutez une largeur maximale pour contrôler la taille de l'image */
-    height: auto; /* Permet à la hauteur de s'ajuster automatiquement en fonction de la largeur */
-}
-
-
-.footer-administration:hover{
+#footer-admin:hover{
     background-color: #FF0000;
 }
-
-.footer-it:hover{
+#footer-it:hover{
     background-color: #002CE0;
 }
-
-.footer-photo:hover{
+#footer-photo:hover{
     background-color: #B700C5;
 }
 
-/* ils l'ont dit style */
 
-.text-ont-dit{
-    position: absolute;
-    font-size: 10px;
-    color: #333;
-    max-width: 100px;
-    padding: 10px;
+
+/* ils_ont_dit.html */
+#click-ont-dit{
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+#fleche-ont-dit{
+    max-width: 2vw;
+}
+.div-ont-dit{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1%;
+    font-size: 1.2em;
+    max-width: 20vw;
+    padding: 1vh 1vw;
     background-color: #F0F0F0;
     color: #000000;
-    border-radius: 5px;
+    border-radius: 20px;
+    text-align: center;
 }
-
-#text1{  
-    top: 100px;
-    left: 10%; 
+.div-ont-dit:hover{
+    background-color: #e0e0e0;
+    transform: scale(1.1);
 }
-
-#text2{
-    top: 200px;
-    left: 80%;
-}
-
-#text3{
-    top: 250px;
-    left: 40%;
-}
-
 .ont-dit-citation{
     font-style: italic;
-    margin-top:0
+    margin:0;
 }
-
 .ont-dit-signature{
     font-weight: bold;
-    margin-bottom:0
+    margin:0;
 }
-
 .footer-contact:hover{
-	    background-color: #FF0000;
+    background-color: #FF0000;
+}
+.footer-savoir-plus:hover{
+    background-color: #002CE0;
 }
 
-.footer-savoir-plus:hover{
-	    background-color: #002CE0;
+
+
+/* parcours_pro.html & formations.html */
+.div-xp-pro, .div-formation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 2vh 2vw;
+    margin-bottom: 3vh;
 }
+.div-xp-pro img{
+    height: 5vh;
+    max-width: auto;
+    margin-bottom: 1vh;
+}
+.title-xp-pro, .detail-xp-pro, .title-formation, .detail-formation{
+    align-self:flex-start;
+}
+.more-pro{
+    color: #000000;
+}
+
+
+
+/* photos.html */
+.shooting-y{
+    max-width: 30vw;
+    height: auto;
+    margin-bottom: 1vh;
+}
+.shooting-x{
+    max-width: 45vw;
+    height:auto;
+    margin-bottom: 1vh;
+}
+
+
+
+/* contact.html */
+.contact-form{
+    margin: auto;
+    background-color: #F0F0F0;
+    max-width: 50vw;
+    border-radius: 20px;
+    padding: 3%;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.confirmation{
+    text-align: center;
+    margin-top: 30vh;
+}
+
+
+
+/*Media screen smartphone*/
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 0.8em;
+    }
+    header {
+        padding: 1vh 2vw;
+    }
+    header div{
+        width: auto;
+        font-size: 1.5em;
+    }
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1em;
+        padding-left: 0;
+        align-items: flex-end;
+    }
+    footer nav ul{
+        padding: 0;
+    }
+    footer nav ul li{
+        font-size: 0.9em;
+    }
+    #upper-section-index img{
+        max-width: 15vw;
+    }
+    .div-index{
+        width:100vw;
+        margin:auto;
+        align-items: center;
+    }
+    #left-div-index{
+        display: none;
+    }
+    #photo-cv{
+        max-width: 45vw;
+    }
+    #bonjour{
+        margin: 1vh 0;
+    }
+    #presentation{
+        margin-top: 0;
+        margin-bottom:0;
+    }
+    #presentation-div{
+        min-width:100%;
+    }
+    .div-ont-dit{
+        min-width: 60vw;
+        margin: 2vh 0;
+    }
+  }
+
+  @media screen and (max-width: 1280px){
+    h1{
+        font-size: 1.5em;
+    }
+    .div-index{
+        max-width: 25vw;
+        width: 25vw;
+    }
+  }
